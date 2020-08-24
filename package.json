@@ -1,0 +1,33 @@
+{
+  "name": "africons",
+  "version": "1.0.0",
+  "description": "\u0016Set of icons representing African Brands, logos, Governments and organizations",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MuriungiPatrick/africons.git"
+  },
+  "keywords": [
+    "web",
+    "fonts",
+    "africons",
+    "africa",
+    "icons\u001b[D\u001b[D\u001b[D\u001b[D\u001b[Dbrand",
+    "fonts",
+    "free",
+    "web",
+    "fonts"
+  ],
+  "author": "Patrick Muriungi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MuriungiPatrick/africons/issues"
+  },
+  "homepage": "https://github.com/MuriungiPatrick/africons#readme",
+  "devDependencies": {
+    "webpack": "^4.44.1"
+  }
+}
