@@ -9,3 +9,11 @@
 ### How to contribute to this project
 
 Please read through our contributing guidelines. Included are directions for opening issues.
+
+### License
+
+**Brand Icons**
+
+All brand icons are trademarks of their respective owners. The use of these
+trademarks does not indicate endorsement of the trademark holder by Africons, nor vice versa. **Please do not use brand logos for any purpose except
+to represent the company, product, or service to which they refer.**
