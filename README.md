@@ -1,6 +1,8 @@
 # africons
 
-```Africons``` is a collection of ``iconic``,``SVG``, ``font``, and ``CSS toolkit`` representing African Brands, logos, Governments and organizations.
+```Africons``` is a collection of ``iconic``,``SVG``, ``font`` and ``CSS toolkit`` and aims to gather all logos representing African brands and organisations. 
+
+> Each icon comes in several versions: font/svg, original/plain/line etc.
 
 ### How to install and use
 
