@@ -1,5 +1,5 @@
 # africons
-Africons is a Set of icons representing African Brands, logos, Governments and organizations.
+Africons is a Set of web font icons representing African Brands, logos, Governments and organizations.
 
 ### How to install and use
 
