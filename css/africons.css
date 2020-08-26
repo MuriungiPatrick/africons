@@ -9,6 +9,24 @@
     font-weight: normal;
     font-style: normal;
 }
+
+[class^="africons-"], [class*=" africons-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'africons' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*
+ORIGINAL
 [class*='africons-']:before{
 	display: inline-block;
    font-family: 'africons';
@@ -18,4 +36,11 @@
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale
 }
-.africons-mpesa:before{content:'\004d';}
+*/
+.africons-mpesa:before{
+  content:'\004d';
+}
+
+.africons-airtel:before{
+  content:'\004e';
+}

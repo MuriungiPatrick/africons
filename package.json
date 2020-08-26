@@ -30,5 +30,8 @@
   "homepage": "https://github.com/MuriungiPatrick/africons#readme",
   "devDependencies": {
     "webpack": "^4.44.1"
+  
+    
   }
+
 }
