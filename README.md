@@ -6,6 +6,8 @@
 
 ### How to install and use
 
+> copy the `css` and `fonts folder` to your project
+
 ### How to contribute to this project
 
 Please read through our contributing guidelines. Included are directions for opening issues.
