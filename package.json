@@ -4,7 +4,7 @@
   "description": "A collection of icons representing African Brands, logos and organizations",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile:sass": "node-sass style.scss style.css -w"
   },
   "repository": {
     "type": "git",
@@ -30,8 +30,6 @@
   "homepage": "https://github.com/MuriungiPatrick/africons#readme",
   "devDependencies": {
     "webpack": "^4.44.1"
-  
-    
   }
 
 }

@@ -1,0 +1,24 @@
+/**##############################################################
+                                            Variables
+###############################################################**/
+
+$primary: #239;
+$secondary: #210333;
+
+
+.africons {
+    display: flex;
+    border: 1px solid $primary;
+    
+    &__icon {
+        width: 20rem;
+        display: flex;
+    }
+
+    &--title {
+        font-size: 3rem;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+}
