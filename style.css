@@ -1,0 +1,22 @@
+/**##############################################################
+                                            Variables
+###############################################################
+**/
+
+
+.africons {
+    display: flex;
+    border: 1px solid #ddd;
+    
+}
+
+.icon {
+        width: 20rem;
+        /*display: flex;*/
+    }
+
+.title {
+    font-size: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+}
