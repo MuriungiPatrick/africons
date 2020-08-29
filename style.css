@@ -2,6 +2,13 @@
                                             Variables
 ###############################################################
 **/
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; 
+}
 
 body {
   font-family: Karla;
@@ -13,21 +20,19 @@ body {
 }
 
 .africons {
-    display: flex;
+    display: grid;
     border: 1px solid #ddd;
+    padding: 1rem 0;
+    margin: 1px;
+    grid-template-columns: repeat(6, 1fr);
+    justify-content: space-between;
    
 }
 
 .icon { 
         border: 1px solid #ddd;
         padding: 1rem;
-        display: inline-block;
 
-}
-@media (max-width: 600px) {
-  .icon {
-    display: block;
-  }
 }
 
  i  {
@@ -35,7 +40,7 @@ body {
 
 }
 
-@media (max-width: 600px) {
+@media only screen and (max-width: 600px) {
   i {
     font-size: 4rem;
   }
@@ -49,7 +54,7 @@ body {
     line-height: 4rem;
 }
 
-@media (max-width: 600px) {
+@media only screen and (max-width: 600px) {
   .title {
    font-size: 2rem;
    line-height: 2.2rem;
