@@ -25,6 +25,7 @@ body {
     margin: 1px;
     grid-template-columns: repeat( auto-fit, minmax(150px, 1fr) );
     align-items: center;
+    grid-gap: 5px;
     /*justify-content: space-between;*/
    
 }
@@ -52,6 +53,7 @@ body {
     text-transform: uppercase;
     text-align: center;
     line-height: 4rem;
+    color: #d030a0;
 }
 
 @media only screen and (max-width: 600px) {
