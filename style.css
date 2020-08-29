@@ -3,20 +3,55 @@
 ###############################################################
 **/
 
+body {
+  font-family: Karla;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #4b4b4b;
+  -webkit-font-smoothing: antialiased;
+}
 
 .africons {
     display: flex;
     border: 1px solid #ddd;
-    
+   
 }
 
-.icon {
-        width: 20rem;
-        /*display: flex;*/
-    }
+.icon { 
+        border: 1px solid #ddd;
+        padding: 1rem;
+        display: inline-block;
+
+}
+@media (max-width: 600px) {
+  .icon {
+    display: block;
+  }
+}
+
+ i  {
+    font-size: 8rem;
+
+}
+
+@media (max-width: 600px) {
+  i {
+    font-size: 4rem;
+  }
+}
+
 
 .title {
     font-size: 3rem;
     text-transform: uppercase;
     text-align: center;
+    line-height: 4rem;
+}
+
+@media (max-width: 600px) {
+  .title {
+   font-size: 2rem;
+   line-height: 2.2rem;
+  }
 }
