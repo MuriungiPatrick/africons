@@ -12,7 +12,7 @@
 
 [class^="africons-"], [class*=" africons-"] {
     /* use !important to prevent issues with browser extensions that change fonts */
-    font-family: 'africons' !important;
+    font-family: 'africons';
     speak: never;
     font-style: normal;
     font-weight: normal;
@@ -43,4 +43,7 @@ ORIGINAL
 
 .africons-airtel:before{
   content:'\004e';
+}
+.africons-jumia:before{
+  content:'\004f';
 }
