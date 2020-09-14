@@ -1,0 +1,499 @@
+/*  Africons 1.0.0
+    the iconic font designed for use on the web
+    
+
+    License
+    -------------------------------------------------------
+    • The Africons font is licensed under the SIL Open Font License - http://scripts.sil.org/OFL
+    • Africons CSS, LESS, and SASS files are licensed under the MIT License -
+      http://opensource.org/licenses/mit-license.html
+
+    Contact
+    -------------------------------------------------------
+    Email: muriungpatrick@gmail.com
+    Twitter: http://twitter.com/ItsMuriungi
+
+    */
+
+
+$africonsPath:   "../fons" !default;
+$borderColor:       #eee;
+$iconMuted:         #eee;
+@mixin border-radius($radius) { -webkit-border-radius: $radius; -moz-border-radius: $radius; border-radius: $radius; }
+
+
+@font-face {
+  font-family: 'africons';
+  src: url('../fonts/africons-webfont.eot');
+  src: url('../fonts/africons-webfont.eot?#iefix') format("embedded-opentype"),
+         url('../fonts/africons.woff') format('woff'),
+         url('../fonts/africons.ttf') format('truetype'),
+    url('../fonts/africons.svg#africons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/*  Africons styles
+    ------------------------------------------------------- */
+/* includes sprites.less reset */
+[class^="africons-"],
+[class*=" africons-"] {
+  font-family: africons;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  display: inline;
+  width: auto;
+  height: auto;
+  line-height: normal;
+  vertical-align: baseline;
+  background-image: none !important;
+  background-position: 0% 0%;
+  background-repeat: repeat;
+}
+
+[class^="africons-"]:before,
+[class*=" africons-"]:before {
+  text-decoration: inherit;
+  display: inline-block;
+  speak: none;
+}
+
+/* makes sure icons active on rollover in links */
+a {
+  [class^="africons-"],
+  [class*=" africons-"] {
+    display: inline-block;
+  }
+}
+
+/* makes the font 33% larger relative to the icon container */
+.africons-large:before {
+  vertical-align: -10%;
+  font-size: 1.3333333333333333em;
+}
+
+.btn, .nav {
+  [class^="africons-"],
+  [class*=" africons-"] {
+    display: inline;
+    /* keeps button heights with and without icons the same */
+    line-height: .6em;
+    &.africons-spin {
+      display: inline-block;
+    }
+  }
+}
+
+li {
+  [class^="africons-"],
+  [class*=" africons-"] {
+    display: inline-block;
+    width: 1.25em;
+    text-align: center;
+    &.africons-large {
+      /* increased font size for africons-large */
+      width: 1.25*1.25em;
+    }
+  }
+}
+
+ul.icons {
+  list-style-type: none;
+  text-indent: -.75em;
+
+  li {
+    [class^="africons-"],
+    [class*=" africons-"] {
+      width: .75em;
+    }
+  }
+}
+
+.africons-muted {
+  color: $iconMuted;
+}
+
+// Icon Borders
+// -------------------------
+
+.africons-border {
+  border: solid 1px $borderColor;
+  padding: .2em .25em .15em;
+  @include border-radius(3px);
+}
+
+// Icon Sizes
+// -------------------------
+
+.africons-2x {
+  font-size: 2em;
+  &.africons-border {
+    border-width: 2px;
+    @include border-radius(4px);
+  }
+}
+.africons-3x {
+  font-size: 3em;
+  &.africons-border {
+    border-width: 3px;
+    @include border-radius(5px);
+  }
+}
+.africons-4x {
+  font-size: 4em;
+  &.africons-border {
+    border-width: 4px;
+    @include border-radius(6px);
+  }
+}
+
+// Floats
+// -------------------------
+
+// Quick floats
+.pull-right { float: right; }
+.pull-left { float: left; }
+
+[class^="africons-"],
+[class*=" africons-"] {
+  &.pull-left {
+    margin-right: .35em;
+  }
+  &.pull-right {
+    margin-left: .35em;
+  }
+}
+
+.btn {
+  [class^="africons-"],
+  [class*=" africons-"] {
+    &.pull-left, &.pull-right {
+      &.africons-2x { margin-top: .35em; }
+    }
+    &.africons-spin.africons-large { height: .75em; }
+  }
+}
+
+.btn.btn-small {
+  [class^="africons-"],
+  [class*=" africons-"] {
+    &.pull-left, &.pull-right {
+      &.africons-2x { margin-top: .45em; }
+    }
+  }
+}
+
+.btn.btn-large {
+  [class^="africons-"],
+  [class*=" africons-"] {
+    &.pull-left, &.pull-right {
+      &.africons-2x { margin-top: .2em; }
+    }
+  }
+}
+
+
+.africons-spin {
+  display: inline-block;
+  -moz-animation: spin 2s infinite linear;
+  -o-animation: spin 2s infinite linear;
+  -webkit-animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear;
+}
+
+@-moz-keyframes spin {
+  0% { -moz-transform: rotate(0deg); }
+  100% { -moz-transform: rotate(359deg); }
+}
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(359deg); }
+}
+@-o-keyframes spin {
+  0% { -o-transform: rotate(0deg); }
+  100% { -o-transform: rotate(359deg); }
+}
+@-ms-keyframes spin {
+  0% { -ms-transform: rotate(0deg); }
+  100% { -ms-transform: rotate(359deg); }
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(359deg); }
+}
+
+
+/*  Africons uses the Unicode Private Use Area (PUA) to ensure screen
+    readers do not read off random characters that represent icons */
+.africons-glass:before                { content: "\0000"; }
+.africons-music:before                { content: "\0001"; }
+.africons-search:before               { content: "\0002"; }
+.africons-envelope:before             { content: "\0003"; }
+.africons-heart:before                { content: "\0004"; }
+.africons-star:before                 { content: "\0005"; }
+.africons-star-empty:before           { content: "\0006"; }
+.africons-user:before                 { content: "\0007"; }
+.africons-film:before                 { content: "\0008"; }
+.africons-th-large:before             { content: "\0009"; }
+.africons-th:before                   { content: "\000a"; }
+.africons-th-list:before              { content: "\000b"; }
+.africons-ok:before                   { content: "\000c"; }
+.africons-remove:before               { content: "\000d"; }
+.africons-zoom-in:before              { content: "\000e"; }
+
+.africons-zoom-out:before             { content: "\0010"; }
+.africons-off:before                  { content: "\0011"; }
+.africons-signal:before               { content: "\0012"; }
+.africons-cog:before                  { content: "\0013"; }
+.africons-trash:before                { content: "\0014"; }
+.africons-home:before                 { content: "\0015"; }
+.africons-file:before                 { content: "\0016"; }
+.africons-time:before                 { content: "\0017"; }
+.africons-road:before                 { content: "\0018"; }
+.africons-download-alt:before         { content: "\0019"; }
+.africons-download:before             { content: "\001a"; }
+.africons-upload:before               { content: "\001b"; }
+.africons-inbox:before                { content: "\001c"; }
+.africons-play-circle:before          { content: "\001d"; }
+.africons-repeat:before               { content: "\001e"; }
+
+/* \0020 doesn't work in Safari. all shifted one down */
+.africons-refresh:before              { content: "\0021"; }
+.africons-list-alt:before             { content: "\0022"; }
+.africons-lock:before                 { content: "\0023"; }
+.africons-flag:before                 { content: "\0024"; }
+.africons-headphones:before           { content: "\0025"; }
+.africons-volume-off:before           { content: "\0026"; }
+.africons-volume-down:before          { content: "\0027"; }
+.africons-volume-up:before            { content: "\0028"; }
+.africons-qrcode:before               { content: "\0029"; }
+.africons-barcode:before              { content: "\002a"; }
+.africons-tag:before                  { content: "\002b"; }
+.africons-tags:before                 { content: "\002c"; }
+.africons-book:before                 { content: "\002d"; }
+.africons-bookmark:before             { content: "\002e"; }
+.africons-print:before                { content: "\002f"; }
+
+.africons-camera:before               { content: "\0030"; }
+.africons-font:before                 { content: "\0031"; }
+.africons-bold:before                 { content: "\0032"; }
+.africons-italic:before               { content: "\0033"; }
+.africons-text-height:before          { content: "\0034"; }
+.africons-text-width:before           { content: "\0035"; }
+.africons-align-left:before           { content: "\0036"; }
+.africons-align-center:before         { content: "\0037"; }
+.africons-align-right:before          { content: "\0038"; }
+.africons-align-justify:before        { content: "\0039"; }
+.africons-list:before                 { content: "\003a"; }
+.africons-indent-left:before          { content: "\003b"; }
+.africons-indent-right:before         { content: "\003c"; }
+.africons-facetime-video:before       { content: "\003d"; }
+.africons-picture:before              { content: "\003e"; }
+
+.africons-pencil:before               { content: "\0040"; }
+.africons-map-marker:before           { content: "\0041"; }
+.africons-adjust:before               { content: "\0042"; }
+.africons-tint:before                 { content: "\0043"; }
+.africons-edit:before                 { content: "\0044"; }
+.africons-share:before                { content: "\0045"; }
+.africons-check:before                { content: "\0046"; }
+.africons-move:before                 { content: "\0047"; }
+.africons-step-backward:before        { content: "\0048"; }
+.africons-fast-backward:before        { content: "\0049"; }
+.africons-backward:before             { content: "\004a"; }
+.africons-play:before                 { content: "\004b"; }
+.africons-pause:before                { content: "\004c"; }
+.africons-stop:before                 { content: "\004d"; }
+.africons-forward:before              { content: "\004e"; }
+
+.africons-fast-forward:before         { content: "\0050"; }
+.africons-step-forward:before         { content: "\0051"; }
+.africons-eject:before                { content: "\0052"; }
+.africons-chevron-left:before         { content: "\0053"; }
+.africons-chevron-right:before        { content: "\0054"; }
+.africons-plus-sign:before            { content: "\0055"; }
+.africons-minus-sign:before           { content: "\0056"; }
+.africons-remove-sign:before          { content: "\0057"; }
+.africons-ok-sign:before              { content: "\0058"; }
+.africons-question-sign:before        { content: "\0059"; }
+.africons-info-sign:before            { content: "\005a"; }
+.africons-screenshot:before           { content: "\005b"; }
+.africons-remove-circle:before        { content: "\005c"; }
+.africons-ok-circle:before            { content: "\005d"; }
+.africons-ban-circle:before           { content: "\005e"; }
+
+.africons-arrow-left:before           { content: "\0060"; }
+.africons-arrow-right:before          { content: "\0061"; }
+.africons-arrow-up:before             { content: "\0062"; }
+.africons-arrow-down:before           { content: "\0063"; }
+.africons-share-alt:before            { content: "\0064"; }
+.africons-resize-full:before          { content: "\0065"; }
+.africons-resize-small:before         { content: "\0066"; }
+.africons-plus:before                 { content: "\0067"; }
+.africons-minus:before                { content: "\0068"; }
+.africons-asterisk:before             { content: "\0069"; }
+.africons-exclamation-sign:before     { content: "\006a"; }
+.africons-gift:before                 { content: "\006b"; }
+.africons-leaf:before                 { content: "\006c"; }
+.africons-fire:before                 { content: "\006d"; }
+.africons-eye-open:before             { content: "\006e"; }
+
+.africons-eye-close:before            { content: "\0070"; }
+.africons-warning-sign:before         { content: "\0071"; }
+.africons-plane:before                { content: "\0072"; }
+.africons-calendar:before             { content: "\0073"; }
+.africons-random:before               { content: "\0074"; }
+.africons-comment:before              { content: "\0075"; }
+.africons-magnet:before               { content: "\0076"; }
+.africons-chevron-up:before           { content: "\0077"; }
+.africons-chevron-down:before         { content: "\0078"; }
+.africons-retweet:before              { content: "\0079"; }
+.africons-shopping-cart:before        { content: "\007a"; }
+.africons-folder-close:before         { content: "\007b"; }
+.africons-folder-open:before          { content: "\007c"; }
+.africons-resize-vertical:before      { content: "\007d"; }
+.africons-resize-horizontal:before    { content: "\007e"; }
+
+.africons-bar-chart:before            { content: "\0080"; }
+.africons-twitter-sign:before         { content: "\0081"; }
+.africons-facebook-sign:before        { content: "\0082"; }
+.africons-camera-retro:before         { content: "\0083"; }
+.africons-key:before                  { content: "\0084"; }
+.africons-cogs:before                 { content: "\0085"; }
+.africons-comments:before             { content: "\0086"; }
+.africons-thumbs-up:before            { content: "\0087"; }
+.africons-thumbs-down:before          { content: "\0088"; }
+.africons-star-half:before            { content: "\0089"; }
+.africons-heart-empty:before          { content: "\008a"; }
+.africons-signout:before              { content: "\008b"; }
+.africons-linkedin-sign:before        { content: "\008c"; }
+.africons-pushpin:before              { content: "\008d"; }
+.africons-external-link:before        { content: "\008e"; }
+
+.africons-signin:before               { content: "\0090"; }
+.africons-trophy:before               { content: "\0091"; }
+.africons-github-sign:before          { content: "\0092"; }
+.africons-upload-alt:before           { content: "\0093"; }
+.africons-lemon:before                { content: "\0094"; }
+.africons-phone:before                { content: "\0095"; }
+.africons-check-empty:before          { content: "\0096"; }
+.africons-bookmark-empty:before       { content: "\0097"; }
+.africons-phone-sign:before           { content: "\0098"; }
+.africons-twitter:before              { content: "\0099"; }
+.africons-facebook:before             { content: "\009a"; }
+.africons-github:before               { content: "\009b"; }
+.africons-unlock:before               { content: "\009c"; }
+.africons-credit-card:before          { content: "\009d"; }
+.africons-rss:before                  { content: "\009e"; }
+
+.africons-hdd:before                  { content: "\00a0"; }
+.africons-bullhorn:before             { content: "\00a1"; }
+.africons-bell:before                 { content: "\00a2"; }
+.africons-certificate:before          { content: "\00a3"; }
+.africons-hand-right:before           { content: "\00a4"; }
+.africons-hand-left:before            { content: "\00a5"; }
+.africons-hand-up:before              { content: "\00a6"; }
+.africons-hand-down:before            { content: "\00a7"; }
+.africons-circle-arrow-left:before    { content: "\00a8"; }
+.africons-circle-arrow-right:before   { content: "\00a9"; }
+.africons-circle-arrow-up:before      { content: "\00aa"; }
+.africons-circle-arrow-down:before    { content: "\00ab"; }
+.africons-globe:before                { content: "\00ac"; }
+.africons-wrench:before               { content: "\00ad"; }
+.africons-tasks:before                { content: "\00ae"; }
+
+.africons-filter:before               { content: "\00b0"; }
+.africons-briefcase:before            { content: "\00b1"; }
+.africons-fullscreen:before           { content: "\00b2"; }
+
+.africons-group:before                { content: "\00c0"; }
+.africons-link:before                 { content: "\00c1"; }
+.africons-cloud:before                { content: "\00c2"; }
+.africons-beaker:before               { content: "\00c3"; }
+.africons-cut:before                  { content: "\00c4"; }
+.africons-copy:before                 { content: "\00c5"; }
+.africons-paper-clip:before           { content: "\00c6"; }
+.africons-save:before                 { content: "\00c7"; }
+.africons-sign-blank:before           { content: "\00c8"; }
+.africons-reorder:before              { content: "\00c9"; }
+.africons-list-ul:before              { content: "\00ca"; }
+.africons-list-ol:before              { content: "\00cb"; }
+.africons-strikethrough:before        { content: "\00cc"; }
+.africons-underline:before            { content: "\00cd"; }
+.africons-table:before                { content: "\00ce"; }
+
+.africons-magic:before                { content: "\00d0"; }
+.africons-truck:before                { content: "\00d1"; }
+.africons-pinterest:before            { content: "\00d2"; }
+.africons-pinterest-sign:before       { content: "\00d3"; }
+.africons-google-plus-sign:before     { content: "\00d4"; }
+.africons-google-plus:before          { content: "\00d5"; }
+.africons-money:before                { content: "\00d6"; }
+.africons-caret-down:before           { content: "\00d7"; }
+.africons-caret-up:before             { content: "\00d8"; }
+.africons-caret-left:before           { content: "\00d9"; }
+.africons-caret-right:before          { content: "\00da"; }
+.africons-columns:before              { content: "\00db"; }
+.africons-sort:before                 { content: "\00dc"; }
+.africons-sort-down:before            { content: "\00dd"; }
+.africons-sort-up:before              { content: "\00de"; }
+
+.africons-envelope-alt:before         { content: "\00e0"; }
+.africons-linkedin:before             { content: "\00e1"; }
+.africons-undo:before                 { content: "\00e2"; }
+.africons-legal:before                { content: "\00e3"; }
+.africons-dashboard:before            { content: "\00e4"; }
+.africons-comment-alt:before          { content: "\00e5"; }
+.africons-comments-alt:before         { content: "\00e6"; }
+.africons-bolt:before                 { content: "\00e7"; }
+.africons-sitemap:before              { content: "\00e8"; }
+.africons-umbrella:before             { content: "\00e9"; }
+.africons-paste:before                { content: "\00ea"; }
+.africons-lightbulb:before            { content: "\00eb"; }
+.africons-exchange:before             { content: "\00ec"; }
+.africons-cloud-download:before       { content: "\00ed"; }
+.africons-cloud-upload:before         { content: "\00ee"; }
+
+.africons-user-md:before              { content: "\0000"; }
+.africons-stethoscope:before          { content: "\00f1"; }
+.africons-suitcase:before             { content: "\00f2"; }
+.africons-bell-alt:before             { content: "\00f3"; }
+.africons-coffee:before               { content: "\00f4"; }
+.africons-food:before                 { content: "\00f5"; }
+.africons-file-alt:before             { content: "\00f6"; }
+.africons-building:before             { content: "\00f7"; }
+.africons-hospital:before             { content: "\00f8"; }
+.africons-ambulance:before            { content: "\00f9"; }
+.africons-medkit:before               { content: "\00fa"; }
+.africons-fighter-jet:before          { content: "\00fb"; }
+.africons-beer:before                 { content: "\00fc"; }
+.africons-h-sign:before               { content: "\00fd"; }
+.africons-plus-sign-alt:before        { content: "\00fe"; }
+
+.africons-double-angle-left:before    { content: "\0100"; }
+.africons-double-angle-right:before   { content: "\0101"; }
+.africons-double-angle-up:before      { content: "\0102"; }
+.africons-double-angle-down:before    { content: "\0103"; }
+.africons-angle-left:before           { content: "\0104"; }
+.africons-angle-right:before          { content: "\0105"; }
+.africons-angle-up:before             { content: "\0106"; }
+.africons-angle-down:before           { content: "\0107"; }
+.africons-desktop:before              { content: "\0108"; }
+.africons-laptop:before               { content: "\0109"; }
+.africons-tablet:before               { content: "\010a"; }
+.africons-mobile-phone:before         { content: "\010b"; }
+.africons-circle-blank:before         { content: "\010c"; }
+.africons-quote-left:before           { content: "\010d"; }
+.africons-quote-right:before          { content: "\010e"; }
+
+.africons-spinner:before              { content: "\0110"; }
+.africons-circle:before               { content: "\0111"; }
+.africons-reply:before                { content: "\0112"; }
+.africons-github-alt:before           { content: "\0113"; }
+.africons-folder-close-alt:before     { content: "\0114"; }
+.africons-folder-open-alt:before      { content: "\0115"; }
+
+// Brands
+.africons-mpesa:before                  {content:'\004d'; }
